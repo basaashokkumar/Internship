@@ -1,4 +1,5 @@
 public class NAI {
+    //NegativeArraySizeException
     public static void main(String[] args) {
         try{
             int a[]=new int[10];

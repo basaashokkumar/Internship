@@ -1,4 +1,5 @@
 public class NP {
+    //NULL POINTER
     public static void main(String[] args) {
         try {
             String s=null;

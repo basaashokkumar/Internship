@@ -1,4 +1,5 @@
 public class NFE {
+    //NUMBER FORMATTING
     public static void main(String[] args) {
         try{
             String s="abc";

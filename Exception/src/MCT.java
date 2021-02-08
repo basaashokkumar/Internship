@@ -1,10 +1,12 @@
 public class MCT {
-
+//mutiple catch try
             public static void main(String[] args) {
 
                 try{
+                    int b=7/0;
                     int a[]=new int[1];
-                    a[8]=30/0;
+                    a[3]=4;
+
                 }
                 catch(ArithmeticException e)
                 {
