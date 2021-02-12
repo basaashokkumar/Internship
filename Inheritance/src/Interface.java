@@ -13,6 +13,9 @@ class DCB implements abc{
 
 
 public class Interface {
-    DCB o=new DCB();
-    o.display();
-}
+    public static void main(String[] args) {
+        DCB o=new DCB();
+        o.display();
+    }
+    }
+

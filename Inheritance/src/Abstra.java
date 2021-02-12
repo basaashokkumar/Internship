@@ -1,4 +1,4 @@
-abstract class Vehicle{
+/*abstract class Vehicle{
     //abstract void features();
     final void features(){
         System.out.println("BIKE->HONDA");
@@ -16,4 +16,4 @@ public class Abstra {
        oj.features();
 
     }
-}
+}*/
