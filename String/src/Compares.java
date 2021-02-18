@@ -1,9 +1,11 @@
 public class Compares {
     public static void main(String args[]){
         String s1="Ashok";
-        String s2="Ashok";
+        s1="Ashokkumar";
+        String s2="as";
         String s3=new String("Ashok");
         String s4="ASHOK",s5="kumar";
+        System.out.println(s1);
         System.out.println(s1.equals(s2));//true
         System.out.println(s1.equals(s3));//true
         System.out.println(s1.equals(s4));//false
