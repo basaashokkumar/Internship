@@ -1,20 +1,10 @@
-import java.util.LinkedList;
-import java.util.List;
-import java.util.*;
-/*class Contact {
-    int sno;
-    String name;
-    long phone;
-    public Contact(int sno, String name,  long phone) {
-        this.sno = sno;
-        this.name = name;
-        this.phone=phone;
-    }
-}*/
-public class ProjectHashset{
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class ProjectLinkedHashset {
     public static void main(String[] args) {
-        //Creating list of Contact
-        Set<Contact> set2=new HashSet<Contact>();
+        Set<Contact> set2=new LinkedHashSet<Contact>();
         //Creating Contact
         Contact b1=new Contact(1,"Amandeep",890987345);
         Contact b2=new Contact(2,"Malleshwari",908762313);
@@ -35,5 +25,6 @@ public class ProjectHashset{
         for(Contact c:set2){
             System.out.println(c.sno+" "+c.name+" "+c.phone);
         }
+
     }
 }
