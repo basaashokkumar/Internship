@@ -18,14 +18,42 @@ class Contact {
             System.out.println(e);
         }
     }
-    Contact(){
-        
+
+
+    List<Contact> list = new ArrayList<Contact>();
+    public int getAddContact() {
+            return 0;
+        }
+        public void setAddContact(int sno,String name,long phone){
+            this.sno=sno;
+            this.name=name;
+            this.phone=phone;
+        }
+
+    public int getDeleteContact() {
+        return 0;
     }
-
-
-public void addContact(){
-
-}
+    public void setDeleteContact(int sno,String name,long phone){
+        this.sno=sno;
+        this.name=name;
+        this.phone=phone;
+    }
+    public int getUpdateContact() {
+        return 0;
+    }
+    public void setUpdateContact(int sno,String name,long phone){
+        this.sno=sno;
+        this.name=name;
+        this.phone=phone;
+    }
+    public int getSearchContact() {
+        return 0;
+    }
+    public void setSearchContact(int sno,String name,long phone){
+        this.sno=sno;
+        this.name=name;
+        this.phone=phone;
+    }
 
     public void run(){
         System.out.println("1.Adding Contact");
@@ -38,19 +66,19 @@ public void addContact(){
         ch= scan.nextInt();
         switch (ch){
             case 1:{
-                addContact();
+                getAddContact();
                 break;
             }
             case 2:{
-                deleteContact();
+                getDeleteContact();
                 break;
             }
             case 3:{
-                updateContact();
+                getUpdateContact();
                 break;
             }
             case 4:{
-                searchContact();
+                getSearchContact();
                 break;
             }
             default:
@@ -61,8 +89,10 @@ public void addContact(){
 }
 public class Controller {
     public static void main(String[] args) {
+        Contact obj=new Contact();
+        obj.run();
         //Creating list of Contact
-        List<Contact> list=new ArrayList<Contact>();
+       /*
         //Creating Contact
         Contact b1=new Contact();
         Contact b2=new Contact();
@@ -100,5 +130,9 @@ public class Controller {
         for(Contact c:list){
             System.out.println(c.sno+" "+c.name+" "+c.phone);
         }
+
+        */
     }
+
+
 }
