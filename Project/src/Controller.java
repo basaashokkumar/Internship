@@ -1,11 +1,12 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.List;
 import java.util.*;
-class Contact {
+class Contactapplication {
     int sno;
     String name;
     long phone;
-    public void contactApplication(){
+    public void setContactDetails(){
         Scanner scan =new Scanner(System.in);
         System.out.println("Enter the contact details:");
         try {
@@ -20,40 +21,55 @@ class Contact {
     }
 
 
-    List<Contact> list = new ArrayList<Contact>();
-    public int getAddContact() {
-            return 0;
-        }
-        public void setAddContact(int sno,String name,long phone){
-            this.sno=sno;
-            this.name=name;
-            this.phone=phone;
-        }
+    List<String> list = new ArrayList<String>();
+    {list.add("Malleshwari");
+        list.add("Amandeep"); }
+    public void AddContact() {
 
-    public int getDeleteContact() {
-        return 0;
+        setContactDetails();
+        list.add(this.name);
+        saveChanges();
+        System.out.println(list);
+
+        }
+    public void DeleteContact() {
+        list.remove(this.name);
+        saveChanges();
+        System.out.println(list);
+
     }
-    public void setDeleteContact(int sno,String name,long phone){
-        this.sno=sno;
-        this.name=name;
-        this.phone=phone;
+    public int setUpdateContact(){
+        Scanner scan =new Scanner(System.in);
+        sno = scan.nextInt();
+        scan.nextLine();
+        name = scan.nextLine();
+        return sno;
     }
-    public int getUpdateContact() {
-        return 0;
+    public String setSearchContact(){
+        System.out.println("Enter the search contact : ");
+        Scanner scan =new Scanner(System.in);
+        name = scan.nextLine();
+
+        return name;
     }
-    public void setUpdateContact(int sno,String name,long phone){
-        this.sno=sno;
-        this.name=name;
-        this.phone=phone;
+
+
+
+    public void UpdateContact() {
+        setUpdateContact();
+        saveChanges();
+        System.out.println(list.set(this.sno,this.name));
+
     }
-    public int getSearchContact() {
-        return 0;
+    public void SearchContact() {
+        setSearchContact();
+        saveChanges();
+        System.out.println(list.contains(this.name));
     }
-    public void setSearchContact(int sno,String name,long phone){
-        this.sno=sno;
-        this.name=name;
-        this.phone=phone;
+    public void saveChanges(){
+
     }
+
 
     public void run(){
         System.out.println("1.Adding Contact");
@@ -66,30 +82,35 @@ class Contact {
         ch= scan.nextInt();
         switch (ch){
             case 1:{
-                getAddContact();
+                AddContact();
+                saveChanges();
                 break;
             }
             case 2:{
-                getDeleteContact();
+                DeleteContact();
+                saveChanges();
                 break;
             }
             case 3:{
-                getUpdateContact();
+                UpdateContact();
+                saveChanges();
                 break;
             }
             case 4:{
-                getSearchContact();
+                SearchContact();
+                saveChanges();
                 break;
             }
             default:
                 System.out.println("Re-enter");
+                run();
         }
     }
 
 }
 public class Controller {
     public static void main(String[] args) {
-        Contact obj=new Contact();
+        Contactapplication obj=new Contactapplication();
         obj.run();
         //Creating list of Contact
        /*
