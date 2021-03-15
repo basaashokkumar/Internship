@@ -1,4 +1,4 @@
-package com.practice.house;
+package com.company;
 
 import java.util.ArrayList;
 class Contacts {
