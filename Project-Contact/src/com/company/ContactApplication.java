@@ -2,12 +2,12 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class MobilePhone {
+public class ContactApplication {
 
     private String myNumber;
     private ArrayList<Contacts> myContacts;
 
-    public MobilePhone(String myNumber) {
+    public ContactApplication(String myNumber) {
         this.myNumber = myNumber;
         this.myContacts = new ArrayList<Contacts>();
     }
@@ -27,7 +27,7 @@ public class MobilePhone {
         return true;
     }
 
-    //Update Contact using set method
+    //Updating the Contact using set method
     public boolean updateContact(Contacts oldContact , Contacts newContact) {
         int foundPosition = findContact(oldContact);
         if(foundPosition < 0) {
@@ -40,7 +40,7 @@ public class MobilePhone {
         return true;
     }
 
-    // Remove Contact
+    // here we are going to remove the  Contact
     public boolean removeContact(Contacts contact) {
         int foundPosition = findContact(contact);
         if(foundPosition < 0) {
@@ -58,7 +58,7 @@ public class MobilePhone {
         return this.myContacts.indexOf(contact);
     }
 
-    // Find Contact Names
+    // searching the Contact Names
     private int findContact(String contactName) {
         for(int i =0; i < myContacts.size(); i++) {
             // Creating another temporary object to hold the name and compare
